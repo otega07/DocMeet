@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Search Doctors</h2>
+<ul>
+    {% for doctor in doctors %}
+    <li><a href="{{ url_for('doctors.doctor_profile', doctor_id=doctor.id) }}">{{ doctor.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
